@@ -11,16 +11,10 @@ import { allFoods } from '../constants';
 
 
 const HomeScreen = () => {
-    // on initial load hiding the default header of react-native-navitagion
-    const navigation = useNavigation();
-    useEffect(() => {
-        navigation.setOptions({
-            headerShown: false,
-        });
-    }, []);
+
     return (
         <ScrollView>
-            <SafeAreaView className="pt-10 bg-white">
+            <SafeAreaView className="bg-white">
                 <View className="mx-[10px] bg-white">
                     {/* Header */}
                     <Header />
