@@ -3,9 +3,11 @@ import { ScrollView, Text, View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
+import { primaryColor } from '../../constants';
+
 
 const Header = ({ foodTitle, title, address, rating, short_description }) => {
-    // console.log(title);
+
     return (
         <View className="bg-white pt-4 px-3 pb-3">
             <Text className="text-2xl font-bold">{foodTitle}</Text>
@@ -21,11 +23,23 @@ const Header = ({ foodTitle, title, address, rating, short_description }) => {
                 </View>
                 <Text className="text-gray-400 font-bold">Nearby - {address}</Text>
             </ScrollView>
-            <Text className="text-gray-400 font-bold pb-3">
+            <Text className="text-gray-400 font-medium text-[13px] pb-3">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam unde beatae sint reprehenderit,
                 {short_description}
             </Text>
-            <View className="w-full h-[2px] bg-gray-200"></View>
+            <View className="relative">
+                <View className="-left-[10%] -right-[10%] h-[2px]  absolute bg-gray-200"></View>
+            </View>
+
+            <View className="pt-4 pb-[10px] flex-row items-center justify-between">
+                <View className="flex-row gap-x-3 items-center">
+                    <View><AntDesign name="questioncircleo" size={18} color="black" /></View>
+                    <Text className="font-bold ">Have a food allergy?</Text>
+                </View>
+                <View>
+                    <AntDesign name="arrowright" size={18} color={primaryColor} />
+                </View>
+            </View>
         </View>
     );
 };

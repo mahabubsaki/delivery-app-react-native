@@ -298,13 +298,71 @@ export const allFoods = [
         lat: 40.6738,
         ingredients: ['Grilled Chicken', 'Pita Bread', 'Tzatziki Sauce', 'Tomatoes'],
     },
-]
+];
 
 
 
 
 
 
+export const dishes = [
+    {
+        id: "001",
+        name: "Classic Roasted Chicken",
+        description: "Tender and juicy roasted chicken served with mashed potatoes and vegetables.",
+        price: 8.50,
+        image: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        id: "002",
+        name: "Spicy Buffalo Wings",
+        description: "Crispy chicken wings tossed in a spicy buffalo sauce, served with blue cheese dressing.",
+        price: 6.75,
+        image: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        id: "003",
+        name: "Chicken Alfredo Pasta",
+        description: "Creamy fettuccine pasta with grilled chicken in a rich Alfredo sauce.",
+        price: 9.25,
+        image: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        id: "004",
+        name: "Honey Mustard Grilled Chicken",
+        description: "Grilled chicken breast glazed with honey mustard sauce, served with rice and steamed vegetables.",
+        price: 7.90,
+        image: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        id: "005",
+        name: "Chicken Caesar Salad",
+        description: "Fresh romaine lettuce tossed with grilled chicken, Parmesan cheese, and Caesar dressing.",
+        price: 6.50,
+        image: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        id: "006",
+        name: "Teriyaki Chicken Stir-Fry",
+        description: "Sautéed chicken and vegetables in a flavorful teriyaki sauce, served over steamed rice.",
+        price: 8.80,
+        image: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        id: "007",
+        name: "Chicken Quesadillas",
+        description: "Grilled flour tortillas stuffed with seasoned chicken, cheese, and veggies, served with salsa and sour cream.",
+        price: 5.95,
+        image: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+        id: "008",
+        name: "Lemon Herb Baked Chicken",
+        description: "Oven-baked chicken marinated in a tangy lemon herb sauce, served with roasted potatoes.",
+        price: 9.10,
+        image: "https://images.pexels.com/photos/6210959/pexels-photo-6210959.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    }
+];
 
 
 
