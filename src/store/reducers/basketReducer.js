@@ -26,7 +26,6 @@ export const basketSlice = createSlice({
             } else if (find.quantity >= 1) {
                 find.quantity -= 1;
             }
-            console.log(state.items);
         },
         fullClearFromBasket: (state, action) => {
             state.items = [...state.items.filter(each => each.id !== action.payload.id)];

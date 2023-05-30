@@ -1,13 +1,13 @@
 import { NavigationContainer, useRoute } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from './screens/HomeScreen';
-import RestaurantScreen from './screens/RestaurantScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import RestaurantScreen from './src/screens/RestaurantScreen';
 const Stack = createNativeStackNavigator();
 import { Provider, useDispatch } from 'react-redux';
-import { store } from './store';
-import BasketScreen from './screens/BasketScreen';
-import OrderPrepareScreen from './screens/OrderPrepareScreen';
-import DeliveryScreen from './screens/DeliveryScreen';
+import { store } from './src/store';
+import BasketScreen from './src/screens/BasketScreen';
+import OrderPrepareScreen from './src/screens/OrderPrepareScreen';
+import DeliveryScreen from './src/screens/DeliveryScreen';
 
 
 export default function App() {

@@ -3,14 +3,24 @@ import React, { useEffect } from 'react';
 import gif from '../../assets/output-onlinegiftools.gif';
 import * as Animatable from 'react-native-animatable';
 import * as Progress from 'react-native-progress';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, CommonActions } from '@react-navigation/native';
 import { ActivityIndicator } from 'react-native';
+import { useNavigationState } from '@react-navigation/native';
 
 export default function OrderPrepareScreen() {
     const navigation = useNavigation();
+
     useEffect(() => {
+
         const timeId = setTimeout(() => {
+            navigation.dispatch(
+                CommonActions.reset({
+                    index: 0,
+                    routes: [{ name: 'Home' }],
+                })
+            );
             navigation.navigate('Delivery');
+
 
         }, 5000);
         return () => {

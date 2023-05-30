@@ -3,14 +3,18 @@ import { Image, Text, TouchableWithoutFeedback, View } from 'react-native';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { useDispatch } from 'react-redux';
+import { setCurrentRestaurent } from '../../store/reducers/restaurentReducer';
 
 const RestaurentsCard = ({ foodTitle, ingredients, lat, long, category, short_description, address, speciality, rating, imgUrl, id, index, length, title }) => {
     const navigation = useNavigation();
+    const dispatch = useDispatch();
     return (
         //Touchableopacity have a effect on press we dont want that effect thats why using touchablewithoutfeedback
 
 
         <TouchableWithoutFeedback onPress={() => {
+            dispatch(setCurrentRestaurent({ foodTitle, ingredients, lat, long, category, short_description, address, speciality, rating, imgUrl, id, index, length }));
             navigation.navigate('SingleRestaurant', {
                 foodTitle, ingredients, lat, long, category, short_description, address, speciality, rating, imgUrl, id, title
             });
