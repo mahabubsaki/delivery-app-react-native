@@ -10,7 +10,7 @@ export default function OrderPrepareScreen() {
     const navigation = useNavigation();
     useEffect(() => {
         const timeId = setTimeout(() => {
-            navigation.navigate('Home');
+            navigation.navigate('Delivery');
 
         }, 5000);
         return () => {

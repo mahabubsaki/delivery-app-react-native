@@ -7,6 +7,7 @@ import { Provider, useDispatch } from 'react-redux';
 import { store } from './store';
 import BasketScreen from './screens/BasketScreen';
 import OrderPrepareScreen from './screens/OrderPrepareScreen';
+import DeliveryScreen from './screens/DeliveryScreen';
 
 
 export default function App() {
@@ -22,6 +23,7 @@ export default function App() {
           <Stack.Screen options={{ headerTitleAlign: 'center' }} name='SingleRestaurant' component={RestaurantScreen} />
           <Stack.Screen name='Basket' component={BasketScreen} options={{ presentation: 'modal', headerShown: false }} />
           <Stack.Screen name='OrderPrepare' component={OrderPrepareScreen} options={{ presentation: 'fullScreenModal', headerShown: false }} />
+          <Stack.Screen name='Delivery' component={DeliveryScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
 
       </Provider>
