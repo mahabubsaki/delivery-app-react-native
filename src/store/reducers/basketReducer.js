@@ -21,11 +21,15 @@ export const basketSlice = createSlice({
             const id = action.payload.id;
             const find = state.items.find(each => each.id === id);
             if (!find) return;
-            if (find.quanity === 1) {
+            if (find.quantity === 1) {
                 state.items = [...state.items.filter(each => each.id !== action.payload.id)];
             } else if (find.quantity >= 1) {
                 find.quantity -= 1;
             }
+            console.log(state.items);
+        },
+        fullClearFromBasket: (state, action) => {
+            state.items = [...state.items.filter(each => each.id !== action.payload.id)];
         },
         clearBasket: (state) => {
             state.items = [];
@@ -34,7 +38,7 @@ export const basketSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { addToBaset, clearBasket, removeFromBasket } = basketSlice.actions;
+export const { addToBaset, clearBasket, removeFromBasket, fullClearFromBasket } = basketSlice.actions;
 export const items = state => state.basket.items;
 export const total = state => state.basket.items.reduce((total, each) => {
     return total += (each.price * each.quantity);

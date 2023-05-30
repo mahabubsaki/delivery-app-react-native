@@ -1,6 +1,6 @@
 import { useNavigation, useNavigationState, useRoute } from '@react-navigation/native';
-import React, { useEffect, useLayoutEffect } from 'react';
-import { Image, SafeAreaView, ScrollView, Text, TextInput, View } from 'react-native';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
+import { ActivityIndicator, Image, SafeAreaView, ScrollView, Text, TextInput, View } from 'react-native';
 import headerImage from '../../assets/header-img.png';
 import { AntDesign, Entypo, Ionicons, FontAwesome } from '@expo/vector-icons';
 import Header from '../components/Home/Header';
@@ -15,6 +15,28 @@ import { clearBasket } from '../store/reducers/basketReducer';
 const HomeScreen = () => {
 
 
+    const dispatch = useDispatch();
+    const state = useNavigationState(state => state);
+    useEffect(() => {
+        const routeName = state.routeNames[state.index];
+        if (routeName === 'Home') {
+            dispatch(clearBasket());
+        }
+    }, [state]);
+    const [loaded, setLoaded] = useState(true);
+    useEffect(() => {
+        const timeId = setTimeout(() => {
+            setLoaded(false);
+        }, 3000);
+        return () => {
+            clearTimeout(timeId);
+        };
+    }, []);
+    if (loaded) {
+        return <View className="flex-1 justify-center">
+            <ActivityIndicator size={'large'} color={'gray'} />
+        </View>;
+    }
     return (
         <ScrollView>
             <SafeAreaView className="bg-white">

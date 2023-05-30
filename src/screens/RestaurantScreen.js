@@ -25,7 +25,7 @@ const RestaurantScreen = () => {
                 <View className="relative">
                     <Image source={{ uri: imgUrl }} className="w-full aspect-video" />
                     <TouchableWithoutFeedback onPress={() => {
-                        dispatch(clearBasket());
+
                         navigation.navigate('Home');
                     }}>
                         <View className="absolute w-[45px] flex-row justify-center items-center h-[45px] border-2 border-[#0088CC] rounded-full top-12 left-6 z-10 bg-[#EFF3F8]">
