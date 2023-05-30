@@ -1,4 +1,4 @@
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useNavigationState, useRoute } from '@react-navigation/native';
 import React, { useEffect, useLayoutEffect } from 'react';
 import { Image, SafeAreaView, ScrollView, Text, TextInput, View } from 'react-native';
 import headerImage from '../../assets/header-img.png';
@@ -8,9 +8,12 @@ import SearchBox from '../components/Home/SearchBox';
 import CategoriesSlider from '../components/Home/CategoriesSlider';
 import FoodRows from '../components/Home/FoodRows';
 import { allFoods } from '../constants';
+import { useDispatch } from 'react-redux';
+import { clearBasket } from '../store/reducers/basketReducer';
 
 
 const HomeScreen = () => {
+
 
     return (
         <ScrollView>
